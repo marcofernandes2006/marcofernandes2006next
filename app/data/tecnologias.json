@@ -1,0 +1,86 @@
+[
+  {
+    "title": "HTML",
+    "image": "html.svg",
+    "description": "Linguagem de marcação usada para estruturar páginas web.",
+    "rating": 4
+  },
+  {
+    "title": "CSS",
+    "image": "css.svg",
+    "description": "Linguagem de estilos utilizada para definir o layout e o design das páginas.",
+    "rating": 4
+  },
+  {
+    "title": "Tailwind CSS",
+    "image": "tailwind.svg",
+    "description": "Framework utilitária de CSS para criar interfaces de forma rápida.",
+    "rating": 5
+  },
+  {
+    "title": "JavaScript",
+    "image": "javascript.svg",
+    "description": "Linguagem de programação utilizada para adicionar interatividade às páginas.",
+    "rating": 5
+  },
+  {
+    "title": "Typescript",
+    "image": "typescript.svg",
+    "description": "Superset do JavaScript que adiciona tipagem estática.",
+    "rating": 5
+  },
+  {
+    "title": "JSON",
+    "image": "json.svg",
+    "description": "Formato leve de troca de dados baseado em texto.",
+    "rating": 4
+  },
+  {
+    "title": "API RESTful",
+    "image": "rest.svg",
+    "description": "Estilo arquitetural para criação de APIs baseadas em recursos.",
+    "rating": 5
+  },
+  {
+    "title": "Swagger",
+    "image": "swagger.svg",
+    "description": "Ferramenta para documentação e teste de APIs.",
+    "rating": 4
+  },
+  {
+    "title": "GitHub",
+    "image": "github.svg",
+    "description": "Plataforma para controlo de versões e colaboração.",
+    "rating": 5
+  },
+  {
+    "title": "Codespaces",
+    "image": "codespaces.svg",
+    "description": "Ambiente de desenvolvimento cloud integrado com GitHub.",
+    "rating": 4
+  },
+  {
+    "title": "GitHub Pages",
+    "image": "github-pages.svg",
+    "description": "Serviço para alojar sites estáticos diretamente de repositórios GitHub.",
+    "rating": 4
+  },
+  {
+    "title": "React.js",
+    "image": "react.svg",
+    "description": "Biblioteca JavaScript para criar interfaces baseadas em componentes.",
+    "rating": 5
+  },
+  {
+    "title": "Next.js",
+    "image": "nextjs.svg",
+    "description": "Framework React com suporte para SSR e funcionalidades avançadas.",
+    "rating": 5
+  },
+  {
+    "title": "Vercel",
+    "image": "vercel.svg",
+    "description": "Plataforma de deploy otimizada para aplicações Next.js e projetos web.",
+    "rating": 5
+  }
+]
