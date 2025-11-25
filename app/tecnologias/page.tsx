@@ -1,31 +1,26 @@
-import React from 'react'
 import tecnologias from '@/app/data/tecnologias.json';
-import Image from 'next/image';
+import TecnologiaCard from '@/components/TecnologiaCard/TecnologiaCard';
+import Tecnologia from '../tecnologia/page';
+import Link from "next/link";
 
-export default function page() {
+export default function tecnologiasPage() {
   return (
     <div>
       <h2>Tecnologias Exploradas</h2>
       <ul>
         {tecnologias.map((tecnologia, i) => {
-          return <li className="list-none">
-            <h2>
-              {tecnologia.title}
-            </h2>
-            <Image
-              src={`/tecnologias/${tecnologia.image}`}
-              alt={tecnologia.title}
-              width={200}
-              height={200}
-            />
-            <p>
-              {tecnologia.description} 
-            </p>
-            <p>
-              Rating: {tecnologia.rating}
-            </p>
-          </li>
-          })}
+          return <Link href={`/tecnologia`}>
+            <li className="list-none bg-gray-300 p-3 m-3 rounded-2xl" key={i}>
+              <TecnologiaCard 
+                title={tecnologia.title} 
+                image={tecnologia.image}
+                description={tecnologia.description}
+                rating={tecnologia.rating}
+              />
+              <Tecnologia id={i}/>
+            </li>
+          </Link>
+        })}
       </ul>
     </div>
   )

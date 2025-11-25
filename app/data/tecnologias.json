@@ -36,18 +36,6 @@
     "rating": 4
   },
   {
-    "title": "API RESTful",
-    "image": "rest.svg",
-    "description": "Estilo arquitetural para criação de APIs baseadas em recursos.",
-    "rating": 5
-  },
-  {
-    "title": "Swagger",
-    "image": "swagger.svg",
-    "description": "Ferramenta para documentação e teste de APIs.",
-    "rating": 4
-  },
-  {
     "title": "GitHub",
     "image": "github.svg",
     "description": "Plataforma para controlo de versões e colaboração.",

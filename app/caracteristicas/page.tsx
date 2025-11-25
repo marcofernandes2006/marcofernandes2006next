@@ -1,3 +1,4 @@
+import Caracteristica from '@/components/Caracteristica/Caracteristica'
 import React from 'react'
 
 const caracteristicas = [
@@ -11,13 +12,15 @@ const caracteristicas = [
         'Comunidade Ativa e Popularidade.'
     ]
 
-export default function page() {
+export default function caracteristicasPage() {
   return (
     <div>
         <h2>Características do React e Next.js</h2>
         <ul>
             {caracteristicas.map((caracteristica, i) => {
-                return <li key={i}>{caracteristica}</li>
+                return <li key={i}>
+                  <Caracteristica caracteristica={caracteristica}/>
+                </li>
             })}
         </ul>
         
