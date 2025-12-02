@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface TecnologiaProps {
   title: string;
@@ -26,6 +27,7 @@ export default function TecnologiaDetailsCard({title, image, description, rating
         <p>
           Rating: {rating}
         </p>
+        <Link href={"/tecnologias"} className='bg-gray-300 p-3 m-3 rounded-2xl'>Voltar</Link>
       </>
     )
 }
