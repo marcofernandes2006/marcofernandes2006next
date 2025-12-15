@@ -1,34 +1,32 @@
-// app/deisishop/categorias/page.tsx
-import Link from "next/link";
-import { fetchCategorias } from "../deisishopApi";
+"use client"
 
-export const dynamic = "force-dynamic";
+import useSWR from 'swr';
+import {Categoria} from '@/models/interfaces'
+import Link from 'next/link';
+import CategoriasCard from '@/components/CategoriasCard/CategoriasCard';
 
-export default async function CategoriasPage() {
-  const categorias = await fetchCategorias();
+const fetcher = (url: string) => fetch(url).then(res => res.json());
+
+export default function page() {
+
+  const {data, error, isLoading} = useSWR<Categoria[]>('https://deisishop.pythonanywhere.com/categories/', fetcher);
+
+  if (error) return <p>Erro ao carregar</p>;
+
+  if (isLoading) return <p>Carregando...</p>;
+
+  if (!data) return <p>Nenhum produto encontrado</p>;
 
   return (
-    <div className="p-6 space-y-4">
-      <h1 className="text-2xl font-bold mb-4">Categorias DEISIshop</h1>
-
-      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {categorias.map((c) => (
-          <Link
-            key={c.id}
-            href={`/deisishop/categorias/${c.id}`}
-            className="border rounded p-3 flex flex-col items-center space-y-2 hover:bg-gray-50"
-          >
-            {c.logo_url && (
-              <img
-                src={c.logo_url}
-                alt={c.nome}
-                className="w-20 h-20 object-contain"
-              />
-            )}
-            <span className="font-semibold">{c.nome}</span>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
+    <>
+        {data.map((categoria, i) => {
+            return <CategoriasCard 
+            id={i}
+            title={categoria.name}
+            logo=''
+            />
+        })}
+        <Link href={"/deisishop"} className='bg-gray-300 p-3 m-3 rounded-2xl'>Voltar</Link>
+    </>
+  )
 }
