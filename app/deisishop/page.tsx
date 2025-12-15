@@ -25,8 +25,10 @@ export default function produtosPage() {
 
   useEffect(() => {
     localStorage.setItem('carrinho', JSON.stringify(carrinho))
-    atualizarTotal(Number(carrinho.reduce((acc, p) => acc + Number(p.price), 0)))
-  }, [carrinho, carrinhoTotal])
+    atualizarTotal(
+      carrinho.reduce((acc, p) => acc + Number(p.price), 0)
+    )
+  }, [carrinho])
   
   useEffect(() => {
     const localCarrinho = localStorage.getItem('carrinho')
