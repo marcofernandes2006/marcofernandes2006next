@@ -23,12 +23,7 @@ export default function produtosPage() {
 
 
 
-  useEffect(() => {
-    localStorage.setItem('carrinho', JSON.stringify(carrinho))
-    atualizarTotal(
-      carrinho.reduce((acc, p) => acc + Number(p.price), 0)
-    )
-  }, [carrinho])
+  
   
   useEffect(() => {
     const localCarrinho = localStorage.getItem('carrinho')
@@ -36,6 +31,13 @@ export default function produtosPage() {
       atualizarCarrinho(JSON.parse(localCarrinho))
     }
   }, [])
+
+  useEffect(() => {
+    localStorage.setItem('carrinho', JSON.stringify(carrinho))
+    atualizarTotal(
+      carrinho.reduce((acc, p) => acc + Number(p.price), 0)
+    )
+  }, [carrinho])
   
   useEffect(() => {
     if (data == null) {
