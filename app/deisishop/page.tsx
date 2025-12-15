@@ -29,9 +29,10 @@ export default function produtosPage() {
   }, [carrinho, carrinhoTotal])
   
   useEffect(() => {
-    const localCarrinho = localStorage.getItem('carrinho') || '[]'
-    const localTotal = localStorage.getItem('carrinhoTotal') || 0
-    atualizarCarrinho(JSON.parse(localCarrinho))
+    const localCarrinho = localStorage.getItem('carrinho')
+    if (localCarrinho) {
+      atualizarCarrinho(JSON.parse(localCarrinho))
+    }
   }, [])
   
   useEffect(() => {
