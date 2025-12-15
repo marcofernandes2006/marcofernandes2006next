@@ -32,7 +32,6 @@ export default function produtosPage() {
     const localCarrinho = localStorage.getItem('carrinho') || '[]'
     const localTotal = localStorage.getItem('carrinhoTotal') || 0
     atualizarCarrinho(JSON.parse(localCarrinho))
-    atualizarTotal(Number(localTotal))
   }, [])
   
   useEffect(() => {
